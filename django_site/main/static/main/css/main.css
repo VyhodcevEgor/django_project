@@ -1,0 +1,163 @@
+body{
+    background-image: url("/main/static/main/images/space-background.jpg");
+    background-attachment: fixed;
+    overflow-y: scroll;
+}
+aside {
+    top: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    float: left;
+    background: rgba(0, 0, 0, 0.8);
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+    width: 90px;
+    float: left;
+}
+
+
+aside h5 a{
+    color: #B211D9;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+aside h3{
+    color: #B211D9;
+    margin-top: 50px;
+    font-size: 27px;
+}
+
+aside h5 a:hover{
+    color: #B211D9;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+aside ul{
+    list-style: none;
+}
+
+aside ul li{
+    color: #B211D9;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: green;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features {
+    float: left;
+    color: #B94CCF;
+    margin-top: 70px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {
+    font-size: 50px;
+    color: #D4B83F;
+}
+
+main .features p {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.8), 10px 0 0 rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+}
+
+main .my_contacts{
+    float: left;
+    color: #B94CCF;
+    margin-top: 70px;
+    text-align: center;
+    width: 80%;
+}
+
+main .my_contacts h1{
+    font-size: 50px;
+    color: #D4B83F;
+}
+
+main .my_contacts ul{
+    background-color: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    text-align: center;
+    font-size: 40px;
+}
+
+main .my_contacts ul li{
+    color: #B211D9;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease;
+}
+
+main .my_contacts ul li:hover, aside ul a:hover{
+    color: green;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .news_home{
+    float: left;
+    color: #B94CCF;
+    margin-top: 70px;
+    text-align: center;
+    width: 75%;
+}
+
+main .news_home h1{
+    font-size: 50px;
+    color: #D4B83F;
+}
+
+main .news_home h3 a{
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.8), 10px 0 0 rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: #BD2932;
+    text-decoration: none;
+}
+
+main .news_home h3:hover, main .news_home h3 a:hover{
+    color: green;
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: transform .6s ease;
+}
+
+main .news_home p{
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.8), 10px 0 0 rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}

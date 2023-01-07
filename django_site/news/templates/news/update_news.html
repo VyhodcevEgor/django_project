@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Редактирование носости{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Форма для редактирования новости</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.preview }}<br>
+            {{ form.news_text }}<br>
+            {{ form.date }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Сохранить изменения</button>
+        </form>
+    </div>
+{% endblock %}
