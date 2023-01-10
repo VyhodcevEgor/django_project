@@ -24,8 +24,14 @@ class NewsDeleteView(DeleteView):
 
 
 def news_home(request):
+    num_of_visits = request.session.get('num_os_visits', 0)
+    request.session['num_of_visits'] = num_of_visits + 1
     news = News.objects.order_by('-date')
-    return render(request, 'news/news_home.html', {'news': news})
+    data = {
+        'news': news,
+        'num_of_visits': num_of_visits
+    }
+    return render(request, 'news/news_home.html', data)
 
 
 def add_news(request):

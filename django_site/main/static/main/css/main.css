@@ -156,8 +156,26 @@ main .news_home p{
     border-radius: 10px;
 }
 
+main .visits_count{
+    float: left;
+    text-align: left;
+    margin-left: 20px;
+    color: #D4B83F;
+    font-size: 17px;
+}
+
 form {
     margin-left: 32%;
     width: 500px;
     margin-top: 50px;
+}
+
+main .content-section .media .rounded-circle {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+main .content-section .media .media-body {
+    margin-left: 20px;
 }

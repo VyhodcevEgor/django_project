@@ -8,13 +8,17 @@
         {% if news %}
             {% for elem in news %}
                 <div class="alert alert-title">
-                    <h3><a href="{% url 'news_detail' elem.id %}">{{ elem.title }}</h3></a>
+                    <h3><a href="{% url 'news_detail' elem.id %}">{{ elem.title }}</a></h3>
                     <p>{{ elem.preview }}</p>
                 </div>
             {% endfor %}
         {% else %}
             <p>Новостей нет!</p>
         {% endif %}
+
         {# Комментарий #}
+    </div>
+    <div class="visits_count">
+        <em>Ваше количество посещений: {{ num_of_visits }}</em>
     </div>
 {% endblock %}

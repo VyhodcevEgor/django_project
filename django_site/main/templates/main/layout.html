@@ -21,7 +21,15 @@
             <a href="{% url 'about' %}"><li><i class="fa-solid fa-circle-info"></i>О себе</li></a>
             <a href="{% url 'news_home' %}"><li><i class="fa-solid fa-circle-info"></i>Новости</li></a>
             <a href="{% url 'contacts' %}"><li><i class="fa-solid fa-phone"></i>Контакты</li></a>
-            <a href="{% url 'add_news' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить новость</button></li></a>
+            {% if user.is_authenticated %}
+            	<a class="nav-item nav-link" href="{% url 'profile' user.id %}"><li>Профиль</li></a>
+            	<a class="nav-item nav-link" href="{% url 'logout' %}"><li>Выход</li></a>
+                <a href="{% url 'add_news' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить новость</button></li></a>
+          	{% else %}
+            	<a class="nav-item nav-link" href="{% url 'login' %}"><li>Вход</li></a>
+            	<a class="nav-item nav-link" href="{% url 'register' %}"><li>Регистрация</li></a>
+          	{% endif %}
+
         </ul>
     </aside>
     <main>
