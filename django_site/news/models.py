@@ -16,3 +16,17 @@ class News(models.Model):
     class Meta:
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
+
+
+class Comment(models.Model):
+    news = models.ForeignKey(News, on_delete=models.CASCADE)
+    author_name = models.CharField('Автор комментария', max_length=40)
+    comment_text = models.CharField('Текст комментария', max_length=250)
+
+    def __str__(self):
+        return self.author_name
+
+    class Meta:
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
+

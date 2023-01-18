@@ -5,8 +5,7 @@ body{
 }
 aside {
     top: 0px;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     float: left;
     background: rgba(0, 0, 0, 0.8);
     width: 20%;
@@ -63,7 +62,8 @@ main .features {
     color: #B94CCF;
     margin-top: 70px;
     text-align: center;
-    width: 75%;
+    width: 85%;
+    margin-left: 15%;
 }
 
 main .features h1 {
@@ -93,6 +93,7 @@ main .my_contacts{
     margin-top: 70px;
     text-align: center;
     width: 80%;
+    margin-left: 20%;
 }
 
 main .my_contacts h1{
@@ -126,6 +127,7 @@ main .news_home{
     margin-top: 70px;
     text-align: center;
     width: 75%;
+    margin-left: 17%;
 }
 
 main .news_home h1{
@@ -171,11 +173,157 @@ form {
 }
 
 main .content-section .media .rounded-circle {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 125px;
     float: left;
 }
 
-main .content-section .media .media-body {
-    margin-left: 20px;
+main .content-section .media .media-body h2{
+    margin-top: -20%;
+    color: #D4B83F;
+}
+
+main .content-section .media .media-body .text-secondary {
+    margin-left: 16px;
+    color: #9D50DB !important;
+    font-size: 19px;
+}
+
+main .comment_section {
+    float: left;
+    margin-top: 70px;
+    text-align: left;
+    width: 70%;
+    margin-left: 22%;
+}
+
+main .comment_section ul{
+    list-style: none;
+}
+
+main .comment_section h2{
+    color: #D4B83F;
+}
+
+main .comment_section ul li strong{
+
+    font-size: 22px;
+    color: #D4B83F;
+}
+
+main .comment_section ul li {
+    display: block;
+    font-size: 18px;
+    color: #9CB5FA;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.8), 10px 0 0 rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+main .not_authorized {
+    color: red;
+    float: left;
+    margin-top: 10px;
+    text-align: left;
+    width: 70%;
+    margin-left: 22%;
+}
+
+main .media{
+    float: left;
+    margin-top: 70px;
+    text-align: left;
+    width: 70%;
+    margin-left: 22%;
+}
+
+main .media .media-body{
+    float: left;
+    text-align: left;
+    width: 70%;
+    margin-left: 22%;
+}
+
+main .media .media-body h2{
+    color: #D4B83F;
+}
+
+main .media .media-body p{
+    font-size: 15 px;
+    color: #D4B83F;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.8), 10px 0 0 rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    width: 30%;
+}
+
+main .logout {
+    float: left;
+    text-align: left;
+    width: 70%;
+    margin-left: 22%;
+    margin-top: 3em;
+}
+
+main .logout h2{
+    font-size: 40px;
+    color: black;
+}
+
+main .logout strong{
+    font-size: 30px;
+    color: black;
+}
+
+main .logout strong:hover a:hover{
+    font-size: 30px;
+    color: green;
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: transform .6s ease;
+}
+
+main .content-section .has-account {
+    float: left;
+    text-align: left;
+    width: 70%;
+    margin-left: 22%;
+    margin-top: 1em;
+}
+
+main .comment_section {
+    float: left;
+    text-align: left;
+    width: 70%;
+    margin-left: 22%;
+    margin-top: -5px;
+}
+
+main .comment_section h3 {
+    font-size: 35px;
+    color: green;
+}
+
+main .comment_section .rounded-circle {
+    width: 100px;
+    height: 85px;
+    float: left;
+}
+
+main .comment_section form {
+    float: left;
+    text-align: left;
+    width: 65%;
+    margin-left: 2%;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.8), 10px 0 0 rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 0.5%;
+    margin-top: -2px;
+}
+
+main .comment_section form input {
+    color: #D4B83F;
+    font-size: 19px;
 }

@@ -9,6 +9,36 @@
         <p>{{ news.news_text }}</p>
         <a href="{% url 'news_update' news.id %}" class="btn btn-info">Редактировать новость</a>
         <a href="{% url 'news_delete' news.id %}" class="btn btn-danger">Удалить новость</a>
-
     </div>
+    <div class="comment_section">
+        <h2>Комментарии к новости</h2>
+        {% if news.comment_set.all %}
+            {% for comment in news.comment_set.all %}
+                <ul>
+                    <li><strong>{{ comment.author_name }}</strong></li>
+                    <li><p>{{ comment.comment_text }}</p></li>
+                </ul>
+            {% endfor %}
+        {% else %}
+        <p>Комментариев нет, станьте первым!</p>
+        {% endif %}
+    </div>
+    <br>
+    {% if user.is_authenticated %}
+    <div class="comment_section">
+        <h3>Оставьте комментарий</h3> <br>
+        <img class="rounded-circle" src="{{ user.profile.image.url }}" >
+        <form action="{% url 'leave_comment' news.id %}" method="POST">
+            {% csrf_token %}
+            <input type="text" readonly class="form-control-plaintext" name="username" value="{{ user.username }}">
+            <textarea class="form-control" name="comment_text" rows="3" placeholder="Текст комментария"></textarea>
+            <button type="submit"> Оставить комментарий</button>
+        </form>
+    </div>
+
+    {% else %}
+    <div class="not_authorized">
+        <h3>Только <a href="{% url 'login' %}">авторизированные</a> пользователи могут оставлять комментарии! </h3>
+    </div>
+    {% endif %}
 {% endblock %}

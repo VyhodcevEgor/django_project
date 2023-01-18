@@ -1,9 +1,10 @@
 {% extends 'main/layout.html' %}
 {% block content %}
+    <div class="logout">
     <h2>Вы вышли из своей учетной записи</h2>
-    <div class="border-top pt-3">
+
         <small class="text-muted">
-            <a href="{% url 'login' %}">Войти</a>
+            <strong><a href="{% url 'login' %}">Войти</a></strong>
         </small>
     </div>
 {% endblock content %}

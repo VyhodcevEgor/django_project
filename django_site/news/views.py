@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import News
 from .forms import NewsForm
 from django.views.generic import DetailView, UpdateView, DeleteView
+from django.http import Http404
 
 
 class NewsDetailView(DetailView):
@@ -51,3 +52,13 @@ def add_news(request):
     }
 
     return render(request, 'news/add_news.html', data)
+
+
+def leave_comment(request, pk):
+    try:
+        news = News.objects.get(id = pk)
+    except:
+        raise Http404('Новость не найдена!')
+    news.comment_set.create(author_name=request.POST['username'], comment_text=request.POST['comment_text'])
+
+    return redirect('news_detail', pk)
